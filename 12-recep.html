@@ -11,6 +11,7 @@
     <script>
 
         const studentCijfer = [8,4,6,9,4,5];
+        studentCijfer.push(2,6);
         let gemiddelde = 0;
         let totaal = 0;
 
@@ -21,6 +22,8 @@
         gemiddelde = totaal / studentCijfer.length;
 
         if(gemiddelde >= 5.5){
+            console.log('Jou gemiddelde cijfer voor NL is: ');
+            console.log(gemiddelde);
             console.log("gefeliciteerd, je bent geslaagd voor Nederlands!");
             } else {
             console.log("helaas, heb je het niet gehaald?! Volgende keer beter Bozo!")
@@ -31,6 +34,7 @@
             alert('Jou gemiddelde cijfer is: ');
             alert(gemiddelde);
             alert('Check nu je console om te kijken of je bent geslaagd!?');
+
     </script>
     
 
