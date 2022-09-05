@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 12 | Recep</title>
+</head>
+<body>
+    
+    <script>
+
+        const studentCijfer = [8,4,6,9,4,5];
+        let gemiddelde = 0;
+        let totaal = 0;
+
+        for(cijfer of studentCijfer){
+            totaal = totaal + cijfer;
+        }
+
+        gemiddelde = totaal / studentCijfer.length;
+
+        if(gemiddelde >= 5.5){
+            console.log("gefeliciteerd, je bent geslaagd voor Nederlands!");
+            } else {
+            console.log("helaas, heb je het niet gehaald?! Volgende keer beter Bozo!")
+            }
+
+            alert('Alle cijfers bij elkaar maakt een totaal van: ')
+            alert(totaal);
+            alert('Jou gemiddelde cijfer is: ');
+            alert(gemiddelde);
+            alert('Check nu je console om te kijken of je bent geslaagd!?');
+    </script>
+    
+
+</body>
+</html>
