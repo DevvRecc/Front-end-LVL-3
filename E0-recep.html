@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eindopdracht | Recep</title>
+</head>
+<body>
+
+    <script>
+        
+        let userInput = prompt("Hoe vaak wil je spelen?");
+        sessionStorage.setItem("pogingSpeler", userInput);
+      
+        let pogingSpeler = sessionStorage.getItem("pogingSpeler");
+        console.log(pogingSpeler);
+      
+        const ceu = { 
+            Italy: "Rome",
+            Luxembourg: "Luxembourg",
+            Belgium: "Brussels",
+            Denmark: "Copenhagen",
+            Finland: "Helsinki",
+            France: "Paris",
+            Slovakia: "Bratislava",
+            Slovenia: "Ljubljana",
+            Germany: "Berlin",
+            Greece: "Athens",
+            Ireland: "Dublin",
+            Netherlands: "Amsterdam",
+            Portugal: "Lisbon",
+            Spain: "Madrid",
+            Sweden: "Stockholm",
+            United_Kingdom: "London",
+            Cyprus: "Nicosia",
+            Lithuania: "Vilnius",
+            Czech_Republic: "Prague",
+            Estonia: "Tallin",
+            Hungary: "Budapest",
+            Latvia: "Riga",
+            Malta: "Valetta",
+            Austria: "Vienna",
+            Poland: "Warsaw",
+        }
+      
+        let countries = Object.keys(ceu);
+      
+        let score = 0;
+        score = sessionStorage.getItem("score");
+      
+        let poging = 0;
+        poging = sessionStorage.getItem("poging");
+      
+        for(let i = 0; i < pogingSpeler; i++){
+            let random = Math.floor(Math.random() * countries.length);
+            
+            let land = countries[random];
+      
+            console.log( land, ceu[land]);
+      
+            let result = prompt(`Wat is de hoofdstad van ${land} 
+            Rome
+            Luxembourg
+            Brussels
+            Copenhagen
+            Helsinki
+            Paris
+            Bratislava
+            Ljubljana
+            Berlin
+            Athens
+            Dublin
+            Amsterdam
+            Lisbon
+            Madrid
+            Stockholm
+            London
+            Nicosia
+            Vilnius
+            Prague
+            Tallin
+            Budapest
+            Riga
+            Valetta
+            Vienna
+            Warsaw
+            `);
+      
+            if(result.toLowerCase() === ceu[land].toLowerCase()){
+                alert("Goedzo, keep it up!");
+                score++;
+            }else{
+                alert("Helaas, probeer het opnieuw!")
+            }
+      
+            poging++;
+      
+            sessionStorage.setItem("score", score);
+            sessionStorage.setItem("poging", poging);
+        }
+      
+        alert(`Jouw score: ${score} | Aantal pogingen: ${poging}`);
+        sessionStorage.removeItem("poging");
+
+      </script>
+
+</body>
+
+</html>
