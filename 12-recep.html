@@ -11,7 +11,6 @@
     <script>
 
         const studentCijfer = [8,4,6,9,4,5];
-        studentCijfer.push(2,6);
         let gemiddelde = 0;
         let totaal = 0;
 
@@ -29,11 +28,34 @@
             console.log("helaas, heb je het niet gehaald?! Volgende keer beter Bozo!")
             }
 
-            alert('Alle cijfers bij elkaar maakt een totaal van: ')
-            alert(totaal);
-            alert('Jou gemiddelde cijfer is: ');
-            alert(gemiddelde);
-            alert('Check nu je console om te kijken of je bent geslaagd!?');
+
+            console.log(" ");
+            
+
+        const studentCijfer1 = [8,4,6,9,4,5];
+        studentCijfer1.push(2,6);
+        let gemiddelde1 = 0;
+        let totaal1 = 0;
+
+        for(cijfer of studentCijfer1){
+            totaal1 = totaal1 + cijfer;
+        }
+
+        gemiddelde1 = totaal1 / studentCijfer1.length;
+
+        if(gemiddelde >= 5.5){
+            console.log('Jou gemiddelde cijfer voor NL is: ');
+            console.log(gemiddelde1);
+            console.log("gefeliciteerd, je bent geslaagd voor Nederlands!");
+            } else {
+            console.log("helaas, heb je het niet gehaald?! Volgende keer beter Bozo!")
+            }
+
+            // alert('Alle cijfers bij elkaar maakt een totaal van: ')
+            // alert(totaal);
+            // alert('Jou gemiddelde cijfer is: ');
+            // alert(gemiddelde);
+            // alert('Check nu je console om te kijken of je bent geslaagd!?');
 
     </script>
     
