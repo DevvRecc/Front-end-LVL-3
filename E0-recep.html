@@ -90,13 +90,13 @@
             if(result.toLowerCase() === ceu[land].toLowerCase()){
                 alert("Goedzo, keep it up!");
                 score++;
-            }else{
+                sessionStorage.setItem("score", score);
+            }
+            else{
                 alert("Helaas, probeer het opnieuw!")
             }
       
             poging++;
-      
-            sessionStorage.setItem("score", score);
             sessionStorage.setItem("poging", poging);
         }
       
